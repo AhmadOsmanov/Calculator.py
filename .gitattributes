@@ -1,2 +1,38 @@
-# Auto detect text files and perform LF normalization
-* text=auto
+
+def toplama(x, y):
+    return x + y
+
+def cixma(x, y):
+    return x - y
+
+def vurma(x, y):
+    return x * y
+
+def bolme(x, y):
+    if y != 0:
+        return x / y
+    else:
+        print("Sıfıra bölünmə xətası!")
+        return None
+
+print("Əməliyyatları seçin:")
+print("1.Toplama")
+print("2.Çıxma")
+print("3.Vurma")
+print("4.Bölme")
+
+secim = input("Seçiminizi daxil edin (1/2/3/4): ")
+
+num1 = float(input("Birinci rəqəmi daxil edin: "))
+num2 = float(input("İkinci rəqəmi daxil edin: "))
+
+if secim == '1':
+    print(num1, "+", num2, "=", toplama(num1, num2))
+elif secim == '2':
+    print(num1, "-", num2, "=", cixma(num1, num2))
+elif secim == '3':
+    print(num1, "*", num2, "=", vurma(num1, num2))
+elif secim == '4':
+    print(num1, "/", num2, "=", bolme(num1, num2))
+else:
+    print("Yanlış seçim!")
